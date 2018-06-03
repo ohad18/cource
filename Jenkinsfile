@@ -17,9 +17,7 @@ node{
    
    
    stage ('Build Dockerfile'){
-       
-       sh 'docker build -t omrisiri/time-tracker:1 .'
-       
+       sh "docker build -t omrisiri/time-tracker:${BUILD_NUMBER} ."
    }
    stage ('ansible-push'){
      sh 'ansible-playbook /home/ubuntu/docker_push_playbook.yml -i /home/ubuntu/hosts'

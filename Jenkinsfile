@@ -5,7 +5,7 @@ node{
       cleanWs()
 
       // Get some code from a GitHub repository
-      git 'git@github.com:omrisiri/course.git';
+      checkout scm
       // Get the Maven tool.
       mvnHome = tool 'M3'
    }
